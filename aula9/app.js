@@ -1,11 +1,11 @@
 const express = require('express');
 const app = express();
-
+const config = require('./config/config');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 
 //MONGOOSE
-const url = 'mongodb+srv://usuario_admin:Do2XqNPcqBWbAvI9@clusterapi.qe51v.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
+const url = config.bd_string;
 const options = { useNewUrlParser: true,  maxPoolSize: 50,
   wtimeoutMS: 2500, }
 
